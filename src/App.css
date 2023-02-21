@@ -1,5 +1,69 @@
-.App {
-  text-align: center;
+@media{
+  html{
+    font-size: 15px;
+  }
+}
+
+
+
+
+/*디버깅용*/
+
+
+.no1{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.no3{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.no7{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.no8{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.Zindex9999{
+  z-index: 9999;
+}
+
+
+
+/*
+
+display: flex;
+flex-direction: column; 
+justify-content: center; 
+align-items: center; 
+
+*/
+
+.alignMaster{
+  display: flex;
+  align-items: center;
+  background-color: #0a4b40;
+  width: 30vw;
+  height: 100vh;
+}
+
+
+.containerMaster{
+  display: flex;
+  align-items: center;
+  background-color: #0a4b40;
+  width: 30vh;
+  height: 100vh;
+}
+
+
+.Nopadding{
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0px;
+  top:0%;
+  left:0%;
 }
 
 .App-logo {
@@ -24,6 +88,252 @@
   color: white;
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+https://fonts.google.com/#standard-styles 여기서 글꼴 가져오기
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+
+
+.App {
+  margin-top: 5vh;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 300;
+  margin-top: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 6;
+}
+
+.testText{
+  margin-top: 100px;
+}
+
+
+
+
+
+
+.BigContainer{
+  margin-top: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.BigContainerReviewWall {
+  margin-top: 25vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.BigContainerWriteReview{
+  margin-top: 9rem;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.fontNotoSerif{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.fontBold{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight:600;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+/*Home page*/
+
+/*대문 이미지 꾸미기*/
+.mainImg{
+  width: 100vw;
+  border:none;
+  font-size:20px;
+}
+
+.Logo_white{
+  width: 18rem;
+  height: 18rem;
+  object-fit:contain;
+}
+
+
+
+/*테두리 넣으려면 다음 게시글을 참고. 
+https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D%B4%EC%85%98-%EB%84%A3%EA%B8%B0
+*/
+
+/*Search*/
+
+.SearchContainer{
+  margin-top: 100px;
+  flex-basis: 90%;
+  height: 78vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.SearchAlign{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 6;
+}
+
+
+.SearchTitle{
+  font-size:3rem;
+  color: #00DE63;
+  margin-right: 2rem;
+  border:none;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 800;
+}
+
+
+.SearchInput{
+  width: 45vw;
+  height: 5vh;
+  font-size:1rem;
+  padding: 2rem;
+  border-radius: 5px;
+  border:none;
+  vertical-align: middle;
+  font-family: 'Nanum Gothic', sans-serif;
+  box-shadow: inset 0 -0.2rem 0 #AEECD4; 
+  line-height: 21rem;
+}
+
+.SearchInput:focus{
+  outline:none;
+}
+
+.SearchInput::selection{
+  background-color: #65E2B2;
+}
+
+.SearchInput::placeholder {
+  color: #bdbdbd; 
+}
+
+.TransparentButton{
+  width: 7vh;
+  margin-top: 1.5rem;
+  border: none;
+  vertical-align: middle;
+  font-size: 3.5vh;
+  font-weight: 600;
+  color:#00DE63;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+  .SearchButton{
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+    font-size: 2rem;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color:  #1DD991;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    background:linear-gradient(to right, #1DD991, #4cc4da);
+    box-shadow: 2px 2px 5px #1DD991;
+    z-index: 4;
+  }
+  
+  .SearchButton:hover{
+      background: linear-gradient(to right, #51e795, #4cc4da);
+      color: white;
+      box-shadow: 2px 2px 5px #1DD991;
+  }
+
+
+  .IconAlign{
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
+
+
+/* 인풋창 테두리는 다음 링크를 참고해서 없앴다. 클릭했을 때의 옵션을 처리하려면
+이렇게 :focus를 처리해줘야 한다! 이 역시 아래 링크에서 참고했다.
+-> https://devilfront.tistory.com/99 */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.SearchItem{
+  width: 300px;
+  height: 50px;
+  border: 1px solid lightblue;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +346,302 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+/*Navigation
+참고 링크: https://sysong85.tistory.com/160
+*/
+
+.Navbar{
+  backdrop-filter: blur(10px);
+  display: table;
+  left: 50%;
+  transform: translateX(-50%);
+
+  position: fixed;
+  top: 30px;
+  border-bottom: 0.001px solid #e5e8eb;
+  font-family: 'Noto Serif KR', serif;
+}
+
+.Nav-font{
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+
+/*animation*/
+
+.fade-in{
+  transition: opacity is ease;
+
+}
+
+.fade-out{
+  opacity: 0;
+  transition: opacity is ease;
+}
+
+
+.isnotdefined{
+  margin-top: 100px;
+}
+
+
+
+
+
+
+/*WriteReview*/
+
+
+.ReviewBox{
+  font-family: 'Nanum Gothic', sans-serif;
+  
+}
+
+.review-form2{
+  font-family: 'Nanum Gothic', sans-serif;
+  background-color: #FFFFFF;
+  animation: fade-in 1s ease-in-out;
+  border:none;
+  border-radius: 20px;
+  color: #0a4b40;
+  padding: 20px 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 15vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.review-form2:focus{
+  outline:none;
+}
+
+.review-form2::selection{
+  background-color: #65E2B2;
+}
+
+
+.review-form2::placeholder {
+  color:#282c34
+}
+
+
+.SubmitButton{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  box-shadow: 0px 0px 10px #AEECD4;
+  background: linear-gradient(to right, #00DE63, #1DC9E6);
+}
+
+.SubmitButton:hover{
+  background: #00DE63;
+  cursor: pointer;
+}
+
+
+.reviewContainer {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 15vh;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #AEECD4;
+  background: linear-gradient(to bottom, #00DE63, #1DC9E6);
+}
+
+.reviewCommentContainer,
+.reviewScoreContainer {
+  flex: 1;
+  text-align: center;
+}
+
+.reviewCommentTitle,
+.reviewScoreTitle {
+  font-weight: bold;
+  color: #05D686;
+}
+
+.reviewComment,
+.reviewScore {
+  color: #35DC9C;
+}
+
+.pageNumbersContainer {
+  width:100%;
+  display: flex;
+  margin-top: 1vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageNumbersContainer span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+.pageNumbersContainer .active {
+  color: #1DD991;
+}
+.passwordInput{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1rem;
+  border:none;
+  border-radius: 10px;
+  width: 20vw;
+  height: 3vh;
+  text-align: center;
+  box-shadow: 1px 3px 10px #AEECD4;
+}
+
+.passwordInput::placeholder {
+  color: #bdbdbd; 
+}
+
+.reviewColumns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+/*  result */
+
+
+
+ /* background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);*/
+ /* background: radial-gradient(180deg, #99e9ad 0%, #3cd5e9, #D6FF7F); */
+
+
+  /*
+
+  .BigZone {
+    text-align: center;
+    align-items: center;
+    padding: 3vw;
+    width: 60vw;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at center, #99e9ad 0%, #3cd5e9, #D6FF7F);
+    border: 2px solid #ddd;
+    border-radius: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+*/
+
+/*
+.BigZone::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: skewX(45deg) translateX(100%);
+}
+*/
+
+
+
+/*
+
+  .SearchButton{
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.3rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgba(252, 251, 251, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+  
+  */
+    
+
+/*
+.review-form {
+  background-color: #fff;
+  border: 1px solid #2DB400;
+  padding: 10px;
+  box-shadow: 2px 2px 5px #ddd;
+  width: 50vb;
+  height: 40vh;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 50%;
+  height: 500px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+input[type="password"] {
+  width: 200px;
+  padding: 15px;
+  height: 5px;
+  margin-bottom: 10px;
+  margin: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #2DB400;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+*/
+  
