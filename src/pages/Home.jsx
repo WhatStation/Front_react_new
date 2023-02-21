@@ -9,7 +9,7 @@ const Container = styled.div`
   position: relative;
   background: linear-gradient(to right, #00DE63, #1DC9E6);
   object-fit: contain;
-  z-index: -1;
+  z-index: -9999;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   width: 100%;
   backdrop-filter: blur(20px);
   overflow: hidden;
-  z-index: -1;
+  z-index: -9999;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ const Button = styled(Link)`
   top: calc(65% - 2.5rem); 
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4;
+  z-index: 99;
 
   @media only screen and (max-width: 1100px) {
     font-size: 2rem;
@@ -86,7 +86,7 @@ const Button = styled(Link)`
     transform: translate(-50%, -50%) scale(1);
     border-radius: 50%;
     opacity: 0;
-    z-index: 5;
+    z-index: 99;
     animation: ${glitter} 1s infinite;
   }
 
@@ -99,7 +99,7 @@ const Button = styled(Link)`
     bottom: -5px;
     background: linear-gradient(to right, #ceecc5, #68fcf2);
     border-radius: 10px;
-    z-index: -1;
+    z-index: 99;
     opacity: 0;
     transition: opacity 0.65s ease-in-out;
   }
@@ -108,6 +108,7 @@ const Button = styled(Link)`
     background: linear-gradient(to right, #51e795, #4cc4da);
     color: white;
     box-shadow: 2px 2px 5px #1DD991;
+    z-index: 99;
   }
 
   &:hover::after {
@@ -132,6 +133,7 @@ const LogoFadeUp = styled.img`
   animation-fill-mode: forwards;
   position: absolute;
   top: calc(18% - 5rem);
+  z-index: 1;
 
   @media only screen and (max-width: 1100px) {
     height: 30vh;
@@ -192,12 +194,12 @@ const Circle = styled.div`
   background: linear-gradient(to right, #1eff83, #4cc4da);
   filter: blur(10px);
   animation: ${circleAnimation} 13s ease-in-out infinite;
+  z-index: -9999;
 `;
 
 
 function Home() {
   return (
-    <div>
     <Container name="container" className="App">
       <Wrapper name="Wrapper">
         {Array.from({ length: 35 }).map((_, i) => (
@@ -218,7 +220,6 @@ function Home() {
         <Title className='fontBold'>Place AI, 감성 맞춤 홍대 식당 알려줘</Title>
       </Wrapper>
     </Container>
-    </div>
   );
 }
 
