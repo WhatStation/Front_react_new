@@ -6,18 +6,6 @@ import styled from 'styled-components';
 
 
 
-const infoLetters = styled.div`
-  font-size:3rem;
-  color: #00DE63;
-  margin-right: 2rem;
-  border:none;
-  vertical-align: middle;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 800;
-`;
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -67,3 +55,20 @@ const Search = () => {
 };
 
 export default Search;
+
+
+
+/*
+const infoLetters = styled.div`
+  font-size:3rem;
+  color: #00DE63;
+  margin-right: 2rem;
+  border:none;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 800;
+`;
+*/

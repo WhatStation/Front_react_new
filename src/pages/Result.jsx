@@ -7,7 +7,7 @@ import Map from '../moduls/Map';
 import { PopupContainer, PopupText, PopupButton } from '../moduls/PopupContainer'; 
 import KeywordButton from '../component/KeywordButton'; 
 import { Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecomendedStoreContainer, RecomendedStoreDetail, SubStoreContainer, SubStoreDetail, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
-
+import { RiSendPlaneFill } from "react-icons/ri";
 
 const API_URL = "http://localhost:8000/api/search/";
 
@@ -100,7 +100,6 @@ function Result() {
       <ResultTagContainer name='ResultTagContainer'>
       <ResultTag>{state.data.result_tags.join(', ')}</ResultTag>
           <TopTitle name='TopTitle'>분위기의 장소를 찾았어요!</TopTitle>
-          
       </ResultTagContainer>
       <ImageContainer name="ImageContainer">
           <Image name="Image"/>
@@ -157,7 +156,8 @@ function Result() {
                 </RecomendedStoreContainer>
           </RecommendInfoContainer>
           <SubStoreContainer name='SubStoreContainer'>
-                <h4> 이런 가게도 있어요! </h4>
+            <div className="papereffect" />
+                <div className='substoreletter'> 이런 가게도 있어요!</div>
                   <SubStoreList>
                     { state && (
                       state.data.sub_stores.map((store, index) => (
@@ -167,9 +167,8 @@ function Result() {
                 </SubStoreList>
               </SubStoreContainer>
           <ReactionContainer name='ReactionContainer'>
-                <div name='no4'>
-                  <h6> 추천 내용에 만족하시나요?</h6>
-                </div>
+                <div className='letter1'>Place AI가 잘 해냈나요? </div>
+
                 <div className='FeedbackTag'>
                   <KeywordButton
                     text="👍"
@@ -182,6 +181,7 @@ function Result() {
                     onClick={() => toggleFeedback("thumbs_down")}
                   />
                 </div>
+                <div className="letter2">이 식당과 더욱 어울리는 키워드가 있나요?</div>
               <div className='keyWordTag'>
                 <KeywordButton
                   text="#가성비있는"
@@ -261,7 +261,11 @@ function Result() {
               </div>
 
               <div name='no6'>
-                <button onClick={handleSubmit}>제출</button>
+                <button className='FeedbackSubmitButton' onClick={handleSubmit}>
+                  <div>
+                    <RiSendPlaneFill />
+                  </div>
+                </button>
                 </div>
           </ReactionContainer>
       </MainContainer>

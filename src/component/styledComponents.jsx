@@ -8,10 +8,12 @@ import '../App.css';
 
 
 export const Container = styled.div`
-  min-width: 1100px;
+  min-width: 1900px;
   width: 100vw;
   height: 100vh;
   z-index: 1;
+  display: flex;
+
 `;
 
 export const MainContainer = styled.div`
@@ -22,9 +24,10 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: row; 
   position: relative;
-  width: 100%;
-  height: 70%;
-  background-position: 50% 30%; 
+  width: 1920px;
+  min-width: 1900px;
+  height: 40rem;
+//  background-position: 50% 30%; 
   z-index: 1;
   background-color: transparent;
 
@@ -42,12 +45,14 @@ export const MainContainer = styled.div`
 
 
 
+
 export const RecommendInfoContainer = styled.div`
   display: flex;
+  margin-top: 1.3rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 400px;
   width: 850px;
   padding: 4vw;
   justify-content: space-between;
@@ -105,6 +110,9 @@ export const SubStoreContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 200px;
   &:before {
   content: "";
   border-radius: 40px;
@@ -135,8 +143,8 @@ export const ReactionContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 12rem;
-  height: 60%;
+  margin-top: 5rem;
+  height: 100%;
   width: 50%;
   justify-content: center;
   .keyWordTag {
@@ -146,8 +154,9 @@ export const ReactionContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vw;
+    width: 35vw;
     z-index: 9999;
+    margin-bottom: 20px;
   }
 `;
 
@@ -157,10 +166,12 @@ export const ResultTagContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
-  
   position: absolute;
-  top: 15rem;
-  right: 5rem;
+  width: 600px;
+  height: 150px;
+  margin-left: 1100px;
+  margin-right: 50rem;
+  top: 200px;
   display: flex;
 
   text-shadow: 0 0 10px #ffffff32, 0 0 10px rgba(255, 255, 255, 0),
@@ -255,7 +266,7 @@ export const SubStoreList = styled.ul`
 
 export const ImageContainer = styled.div`
   position: absolute; 
-  margin-top: 13vh;
+  margin-top: 17vh;
   width: 100vw;
   height: 39vh;
   z-index: -1;
