@@ -3,16 +3,18 @@ import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
-  height: 89.6vh;
+  height: 88vh;
+  margin-top: 12vh;
   width: 100vw;
   position: relative;
   background: linear-gradient(to right, #00DE63, #1DC9E6);
-  z-index: 1;
+  object-fit: contain;
+  z-index: -1;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
-  min-width : 1100px;
+  min-width : 1000px;
   min-height : 1000px;
 `;
 
@@ -23,7 +25,7 @@ const Wrapper = styled.div`
   width: 100%;
   backdrop-filter: blur(20px);
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -195,10 +197,11 @@ const Circle = styled.div`
 
 function Home() {
   return (
-    <Container className="App">
-      <Wrapper>
+    <div>
+    <Container name="container" className="App">
+      <Wrapper name="Wrapper">
         {Array.from({ length: 35 }).map((_, i) => (
-          <Circle
+          <Circle name ="circle"
             key={i}
             top={Math.random() * 240}
             left={Math.random() * 350}
@@ -206,15 +209,16 @@ function Home() {
             style={{ animationDelay: `${0}s` }}
           />
         ))}
-        <LogoFadeUp  
+        <LogoFadeUp name="LogoFadeUp "
           src={`${process.env.PUBLIC_URL}/img/logo_white.PNG`}
           className='Logo_white'
           alt='logoWhite'
         />
-        <Button to="/Search">네, 알려드릴게요</Button>
+        <Button name = "Button" to="/Search">네, 알려드릴게요</Button>
         <Title className='fontBold'>Place AI, 감성 맞춤 홍대 식당 알려줘</Title>
       </Wrapper>
     </Container>
+    </div>
   );
 }
 

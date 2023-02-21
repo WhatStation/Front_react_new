@@ -9,27 +9,6 @@
 
 /*디버깅용*/
 
-
-.Dummy{
-  flex-wrap: wrap;
-  height: 500px;
-  width: 1920px;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-}
-.Dummy2{
-  height: 500px;
-  width: 900px;
-  position: relative;
-}
-
-.Dummy3{
-  height: 500px;
-  width: 10rem;
-  position: relative;
-}
-
 .no1{
   font-family: 'Nanum Gothic', sans-serif;
 }
@@ -49,6 +28,16 @@
   z-index: 9999;
 }
 
+/*스크롤바 없애기*/
+
+.screen-box{
+	-ms-overflow-style:none;
+    scrollbar-width:none;
+}
+
+.screen-box::-webkit-scrollbar {
+  display:none;
+}
 
 
 /*
@@ -579,7 +568,7 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   box-shadow: 2px 2px 5px #1DD991;
 }
 
-.letter1{
+.FeedbackQuestion1{
   font-family: 'Nanum Gothic', sans-serif;
   color: rgb(20, 209, 146);
   font-weight: 800;
@@ -589,25 +578,27 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   width: 20vw;
   height: 3vh;
   text-align: center;
+  margin-bottom: 0.3rem;
 }
 
-.letter2{
+.FeedbackQuestion2{
   font-family: 'Nanum Gothic', sans-serif;
-  color: rgb(20, 209, 146);
-  font-weight: 800;
+  color: rgb(40, 206, 164);
+  font-weight: 900;
   font-size: 17px;
   border:none;
   border-radius: 10px;
   width: 20vw;
   height: 3vh;
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-bottom: 0.4rem;
+  margin-top: 2rem;
 }
 
 .substoreletter{
   font-family: 'Nanum Gothic', sans-serif;
-  color: rgb(20, 209, 146);
+  /*color: rgb(20, 209, 146);*/
+  color:rgba(255, 255, 255, 0.979);
   font-weight: 800;
   font-size: 17px;
   border:none;
@@ -620,7 +611,7 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 }
 
 .papereffect{
-  
+
 }
 
 

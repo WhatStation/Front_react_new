@@ -14,12 +14,23 @@ const PopupContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 `;
 
-const PopupText = styled.p`
+const PopupTextBig = styled.p`
+  background-color: #05d686;
+  color: white;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  z-index: 9999;
+`;
+
+const PopupTextSmall = styled.p`
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 9999;
 `;
 
 const PopupButton = styled.button`
@@ -32,6 +43,7 @@ const PopupButton = styled.button`
   font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
+  z-index: 9999;
 `;
 
-export { PopupContainer, PopupText, PopupButton };
+export { PopupContainer,  PopupTextBig, PopupTextSmall,  PopupButton };

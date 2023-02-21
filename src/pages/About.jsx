@@ -18,7 +18,7 @@ const fadeIn = keyframes`
 `;
 
 const AboutContainer = styled.div`
-  background-image:  url(./img/Result10.png);
+  background-image:  url(./img/Result5.png);
   background-size: cover;
   display: flex;
   flex-direction: column;

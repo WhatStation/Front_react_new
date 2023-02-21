@@ -20,13 +20,13 @@ export const MainContainer = styled.div`
   margin-top: 20vh;
   background-attachment: fixed;
   //backdrop-filter: blur(20px) brightness(120%);
-  padding: 5rem;
+  padding: 7rem;
   display: flex;
   flex-direction: row; 
   position: relative;
   width: 1920px;
   min-width: 1900px;
-  height: 40rem;
+  height: 47rem;
 //  background-position: 50% 30%; 
   z-index: 1;
   background-color: transparent;
@@ -48,13 +48,13 @@ export const MainContainer = styled.div`
 
 export const RecommendInfoContainer = styled.div`
   display: flex;
-  margin-top: 1.3rem;
+  margin-top: 1.8rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 850px;
-  padding: 4vw;
+  padding: 2vw;
   justify-content: space-between;
   border: 2px solid #ddd;
   border-radius: 40px;
@@ -171,7 +171,7 @@ export const ResultTagContainer = styled.div`
   height: 150px;
   margin-left: 1100px;
   margin-right: 50rem;
-  top: 200px;
+  top: 240px;
   display: flex;
 
   text-shadow: 0 0 10px #ffffff32, 0 0 10px rgba(255, 255, 255, 0),
@@ -227,7 +227,7 @@ export const TitleOfInfo = styled.div`
   margin-right: 10px;
   z-index: 9999;
   font-size:1.2rem;
-  color: #00DE63;
+  color: black;
   margin-right: 2rem;
   border:none;
   vertical-align: middle;
@@ -259,6 +259,8 @@ export const ContentsOfInfo = styled.div`
 `;
 
 export const SubStoreList = styled.ul`
+  color:rgba(255, 255, 255, 0.979);
+  font-family: 'Nanum Gothic', sans-serif;
   list-style-type: square;
   z-index: 9999;
 `;
@@ -266,11 +268,82 @@ export const SubStoreList = styled.ul`
 
 export const ImageContainer = styled.div`
   position: absolute; 
-  margin-top: 17vh;
+  margin-top: 19vh;
   width: 100vw;
-  height: 39vh;
+  height: 65vh;
   z-index: -1;
 `;
+
+export const Bubble1 = styled.div`
+  position: absolute; 
+  margin-top: 38vh;
+  width: 260px;
+  height: 260px;
+  z-index: -1;
+  opacity: 0.7;
+  right:820px;
+  border-radius: 45%;
+  border: solid #51e795 1px;
+  background: linear-gradient(180deg, #6afaab, #53cee4),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  //backdrop-filter: blur(20px) brightness(100%);
+  box-shadow: 1px 1px 30px 10px rgba(117, 230, 196, 0.842);
+  //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+`;
+
+
+export const Bubble2 = styled.div`
+  position: absolute; 
+  margin-top: 22vh;
+  width: 150px;
+  height: 140px;
+  z-index: -1;
+  opacity: 0.6;
+  right:1020px;
+  border-radius: 47%;
+  border: solid #51e795 1px;
+  background: linear-gradient(800deg, #81fdb9, #61bfcf),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  //backdrop-filter: blur(20px) brightness(100%);
+  box-shadow: 1px 1px 40px 20px rgba(117, 230, 196, 0.842);
+  //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+`;
+
+export const Bubble3 = styled.div`
+  position: absolute; 
+  margin-top: 60.5vh;
+  width: 78px;
+  height: 83px;
+  opacity: 0.9;
+  right:980px;
+  border-radius: 45%;
+  border: solid #51e795 1px;
+  background: linear-gradient(30deg, #6afaab, #53cee4),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  //backdrop-filter: blur(20px) brightness(100%);
+  box-shadow: 1px 1px 40px 20px rgba(117, 230, 196, 0.842);
+  //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+`;
+
+
+export const Logo = styled.div`
+  position: absolute; 
+  margin-top: 167px;
+  width: 120px;
+  height: 160px;
+  z-index: -1;
+  right:1100px;
+  z-index: 9999;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(153, 255, 122, 0.295),
+      rgba(255, 255, 255, 0)
+    ), url("./img/logo_white.png");
+`;
+
+
+
+
 
 export const Image = styled.div`
   position: absolute; 
@@ -285,6 +358,7 @@ export const Image = styled.div`
 	  0px 0px 1px rgba(255, 255, 255, 0.8);
   position: absolute; 
   width: 100%;
+  border-radius: 30px;
   height: 100%;
   z-index: -1;
   white-space: nowrap;
@@ -294,10 +368,11 @@ export const Image = styled.div`
     background-image: linear-gradient(
       rgba(153, 255, 122, 0.295),
       rgba(255, 255, 255, 0)
-    ),url("./img/Result7.png");
+    ),url("./img/Result3.png");
     background-repeat: no-repeat;
     position: absolute; 
     object-fit: cover;
+    border-radius: 30px;
     width: 100%;
     height: 100%;
     z-index: -1;

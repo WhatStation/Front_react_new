@@ -4,9 +4,9 @@ import { useLocation } from "react-router"
 import axios from 'axios';
 import '../App.css';
 import Map from '../moduls/Map';
-import { PopupContainer, PopupText, PopupButton } from '../moduls/PopupContainer'; 
+import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../moduls/PopupContainer'; 
 import KeywordButton from '../component/KeywordButton'; 
-import { Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecomendedStoreContainer, RecomendedStoreDetail, SubStoreContainer, SubStoreDetail, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
+import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecomendedStoreContainer, RecomendedStoreDetail, SubStoreContainer, SubStoreDetail, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
 import { RiSendPlaneFill } from "react-icons/ri";
 
 const API_URL = "http://localhost:8000/api/search/";
@@ -104,13 +104,17 @@ function Result() {
       <ImageContainer name="ImageContainer">
           <Image name="Image"/>
       </ImageContainer>
+      <Bubble1 name="Bubble1" />
+      <Bubble2 name="Bubble2" />
+      <Bubble3 name="Bubble3" />
+      <Logo />
       <MainContainer name='MainContainer'>
           <RecommendInfoContainer name='RecommendInfoContainer'>
               <Map name='Map' />
               <RecomendedStoreContainer>
                 { state && (
                     <>
-                    <div name='RecomendLetter'style={{fontSize:'1.8rem', fontWeight:'800', color:'#00DE63', marginBottom:'20px',marginTop:'20px'}}> 여기 어때요? </div>
+                    <div name='RecomendLetter'style={{fontSize:'1.8rem', fontWeight:'800', color:'black', marginBottom:'20px',marginTop:'20px'}}> 🐱‍🏍 Place AI 추천 </div>
                       <RecomendedStoreDetail name="RecomendedStoreDetail">
                         <TitleOfInfo>
                           가게명:
@@ -157,7 +161,7 @@ function Result() {
           </RecommendInfoContainer>
           <SubStoreContainer name='SubStoreContainer'>
             <div className="papereffect" />
-                <div className='substoreletter'> 이런 가게도 있어요!</div>
+                <div className='substoreletter'> 유사도 높은 음식점</div>
                   <SubStoreList>
                     { state && (
                       state.data.sub_stores.map((store, index) => (
@@ -167,7 +171,7 @@ function Result() {
                 </SubStoreList>
               </SubStoreContainer>
           <ReactionContainer name='ReactionContainer'>
-                <div className='letter1'>Place AI가 잘 해냈나요? </div>
+                <div className='FeedbackQuestion1'>Place AI가 잘 해냈나요? </div>
 
                 <div className='FeedbackTag'>
                   <KeywordButton
@@ -181,7 +185,7 @@ function Result() {
                     onClick={() => toggleFeedback("thumbs_down")}
                   />
                 </div>
-                <div className="letter2">이 식당과 더욱 어울리는 키워드가 있나요?</div>
+                <div className="FeedbackQuestion2">이 식당과 더욱 어울리는 키워드를 추천해주세요!</div>
               <div className='keyWordTag'>
                 <KeywordButton
                   text="#가성비있는"
@@ -270,8 +274,10 @@ function Result() {
           </ReactionContainer>
       </MainContainer>
       <PopupContainer name='PopupContainer' show={showPopup}>
-        <PopupText>Successful Submission!</PopupText>
-        <PopupButton onClick={() => setShowPopup(false)}>Close</PopupButton>
+        <PopupTextBig>제출 성공!</PopupTextBig>
+        <PopupTextSmall>Place AI가 똑똑해졌어요.</PopupTextSmall>
+        <PopupTextSmall>🐧감사합니다🐧</PopupTextSmall>
+        <PopupButton onClick={() => setShowPopup(false)}>별말씀을요</PopupButton>
       </PopupContainer>
     </Container>
   );
