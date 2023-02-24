@@ -225,8 +225,8 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 
 .SearchTitle{
   font-size:3rem;
-  color: #00DE63;
-  margin-right: 2rem;
+  color: #65E2B2;
+  margin-right: 15px;
   border:none;
   vertical-align: middle;
   text-align: center;
@@ -234,11 +234,16 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   align-items: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 800;
+   background: linear-gradient(to right, #1DD991, #1DC9E6);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 
+
+
 .SearchInput{
-  width: 45vw;
+  width: 100%;
   height: 5vh;
   font-size:1rem;
   padding: 2rem;
@@ -260,6 +265,23 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 
 .SearchInput::placeholder {
   color: #bdbdbd; 
+}
+
+
+/* 새롭게 추가된 search요소들 */
+
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  margin-bottom: 5px;
+}
+
+.ErrorMessage {
+  color: #65E2B2;
+  margin-top: 15px;
+  margin-left: 30px;
+  text-align: center;
 }
 
 .TransparentButton{
@@ -289,6 +311,7 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
     text-decoration: none;
     border-radius: 10px;
     background:linear-gradient(to right, #1DD991, #4cc4da);
+    
     box-shadow: 2px 2px 5px #1DD991;
     z-index: 4;
   }
@@ -306,6 +329,40 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
     justify-content: center;
     display: flex;
   }
+
+  /* 원래 원본의 search요소들
+
+.SearchInput{
+  width: 45vw;
+  height: 5vh;
+  font-size:1rem;
+  padding: 2rem;
+  border-radius: 5px;
+  border:none;
+  vertical-align: middle;
+  font-family: 'Nanum Gothic', sans-serif;
+  box-shadow: inset 0 -0.2rem 0 #AEECD4; 
+  line-height: 21rem;
+}
+
+.SearchInput:focus{
+  outline:none;
+}
+
+.SearchInput::selection{
+  background-color: #65E2B2;
+}
+
+.SearchInput::placeholder {
+  color: #bdbdbd; 
+}
+
+*/
+
+
+/*    background:linear-gradient(to right, #1DD991, #4cc4da);  
+      background: linear-gradient(to right, #00DE63, #1DC9E6);
+*/
 
 
 

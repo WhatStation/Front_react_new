@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { useLocation } from "react-router"
 import axios from 'axios';
 import '../App.css';
-import Map from '../moduls/Map';
-import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../moduls/PopupContainer'; 
+import Map from '../modules/Map';
+import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../modules/PopupContainer'; 
 import KeywordButton from '../component/KeywordButton'; 
 import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecomendedStoreContainer, RecomendedStoreDetail, SubStoreContainer, SubStoreDetail, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
 import { RiSendPlaneFill } from "react-icons/ri";

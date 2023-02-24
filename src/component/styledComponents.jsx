@@ -335,10 +335,7 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  background-image: linear-gradient(
-      rgba(153, 255, 122, 0.295),
-      rgba(255, 255, 255, 0)
-    ), url("./img/logo_white.png");
+  background-image: url("./img/logo_white.png");
 `;
 
 

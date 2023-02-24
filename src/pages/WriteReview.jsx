@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
-import Rating from '../moduls/Rating';
+import Rating from '../modules/Rating';
 import '../App.css';
 
 import {API} from '../config'; 
