@@ -212,7 +212,7 @@ function Home() {
           />
         ))}
         <LogoFadeUp name="LogoFadeUp "
-          src={`${process.env.PUBLIC_URL}/img/logo_white.PNG`}
+          src={`${process.env.PUBLIC_URL}/img/logo_white.png`}
           className='Logo_white'
           alt='logoWhite'
         />

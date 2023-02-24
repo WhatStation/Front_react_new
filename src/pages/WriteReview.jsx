@@ -78,7 +78,7 @@ const WriteReview = () => {
     <div >
       <div className='BigContainerWriteReview'>
         <img 
-            src={`${process.env.PUBLIC_URL}/img/mailbox.PNG`}
+            src={`${process.env.PUBLIC_URL}/img/mailbox.png`}
             //src={'/img/naver_bg.png'}
             className='mailbox'
             alt='mailbox'
