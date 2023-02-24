@@ -23,6 +23,7 @@ const Search = () => {
            state: {data: response.data,
                   input: searchInput}
            });
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
