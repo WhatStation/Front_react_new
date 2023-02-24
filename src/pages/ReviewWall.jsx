@@ -41,7 +41,6 @@ const ReviewWall = () => {
   const [reviews, setReviews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const reviewsPerPage = 12;
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -53,10 +52,12 @@ const ReviewWall = () => {
     };
     fetchData();
   }, []);
-
   const indexOfLastReview = currentPage * reviewsPerPage;
   const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
   const currentReviews = reviews.slice(indexOfFirstReview, indexOfLastReview);
+  
+console.log("슬라이싱 후-------------------")  
+console.log(currentReviews)
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -77,6 +78,7 @@ const ReviewWall = () => {
         {number}
       </span>
     ));
+
   };
 
   return (

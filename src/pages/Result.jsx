@@ -99,7 +99,7 @@ function Result() {
     <Container name='Container'>
       <ResultTagContainer name='ResultTagContainer'>
       <ResultTag>{state.data.result_tags.join(', ')}</ResultTag>
-          <TopTitle name='TopTitle'>분위기의 장소를 찾았어요!</TopTitle>
+          <TopTitle name='TopTitle'>장소를 찾았어요!</TopTitle>
       </ResultTagContainer>
       <ImageContainer name="ImageContainer">
           <Image name="Image"/>
@@ -203,7 +203,7 @@ function Result() {
                   onClick={() => toggleFeedback("wide")}
                 />
                 <KeywordButton
-                  text="#단체가 와도 좋은"
+                  text="#단체 모임"
                   isSelected={feedbackData.corps}
                   onClick={() => toggleFeedback("corps")}
                 />
@@ -253,7 +253,7 @@ function Result() {
                   onClick={() => toggleFeedback("exotictheme")}
                 />
                 <KeywordButton
-                  text="#전형적인"
+                  text="#고급스러운"
                   isSelected={feedbackData.classic}
                   onClick={() => toggleFeedback("classic")}
                 />

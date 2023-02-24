@@ -71,7 +71,7 @@ const Button = styled(Link)`
   top: calc(65% - 2.5rem); 
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 99;
+  z-index: 98;
 
   @media only screen and (max-width: 1100px) {
     font-size: 2rem;
@@ -86,7 +86,7 @@ const Button = styled(Link)`
     transform: translate(-50%, -50%) scale(1);
     border-radius: 50%;
     opacity: 0;
-    z-index: 99;
+    z-index: 98;
     animation: ${glitter} 1s infinite;
   }
 
@@ -99,7 +99,7 @@ const Button = styled(Link)`
     bottom: -5px;
     background: linear-gradient(to right, #ceecc5, #68fcf2);
     border-radius: 10px;
-    z-index: 99;
+    z-index: 98;
     opacity: 0;
     transition: opacity 0.65s ease-in-out;
   }
@@ -108,7 +108,7 @@ const Button = styled(Link)`
     background: linear-gradient(to right, #51e795, #4cc4da);
     color: white;
     box-shadow: 2px 2px 5px #1DD991;
-    z-index: 99;
+    z-index: 98;
   }
 
   &:hover::after {
