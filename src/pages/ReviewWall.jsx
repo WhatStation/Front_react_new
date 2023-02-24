@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled, { keyframes } from 'styled-components';
+import {API} from '../config'; 
+const API_URL = API.REVIEWS
 
 const fadeUp = keyframes`
   0% {
@@ -44,7 +46,7 @@ const ReviewWall = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/rate/');
+        const { data } = await axios.get(API_URL);
         setReviews(data.comments);
       } catch (error) {
         console.error(error);
@@ -55,9 +57,6 @@ const ReviewWall = () => {
   const indexOfLastReview = currentPage * reviewsPerPage;
   const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
   const currentReviews = reviews.slice(indexOfFirstReview, indexOfLastReview);
-  
-console.log("슬라이싱 후-------------------")  
-console.log(currentReviews)
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);

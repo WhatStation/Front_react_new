@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { RiSearchEyeLine } from "react-icons/ri";
 import styled from 'styled-components';
-
+import {API} from '../config'; 
+const API_URL = API.SEARCH
 
 
 
@@ -14,7 +15,7 @@ const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(['http://localhost:8000/api/search/'], { search: searchInput });
+      const response = await axios.post(API_URL, { search: searchInput });
       console.log("check")
       console.log(response.data)
       console.log( "상점 데이터 잘 넘겨 받았어요.")

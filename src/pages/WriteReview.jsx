@@ -5,6 +5,9 @@ import axios from 'axios';
 import Rating from '../moduls/Rating';
 import '../App.css';
 
+import {API} from '../config'; 
+const API_URL = API.REVIEWS
+
 
 const Background = styled.div`
   background-color: #FFFFFF;
@@ -49,7 +52,7 @@ const WriteReview = () => {
     setIsLoading(true);
 
     try {
-      const { data } = await axios.post(['http://localhost:8000/api/rate/'], {
+      const { data } = await axios.post(API_URL, {
         "comment": review,
         "rating" : score,
         "password" : password,

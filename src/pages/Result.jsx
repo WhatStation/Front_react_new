@@ -8,8 +8,8 @@ import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../mo
 import KeywordButton from '../component/KeywordButton'; 
 import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecomendedStoreContainer, RecomendedStoreDetail, SubStoreContainer, SubStoreDetail, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
 import { RiSendPlaneFill } from "react-icons/ri";
-
-const API_URL = "http://localhost:8000/api/search/";
+import {API} from '../config'; 
+const API_URL = API.SEARCH
 
 
 const MiddlePartAlign = styled.div`
