@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 //import { Link } from 'react-router-dom';
 import '../App.css';
+import { RiGithubFill,RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 
 
@@ -58,17 +59,17 @@ const AboutPageMembersZone = styled.div`
   height: 800px;
   width: 100%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  padding: 25px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid #ddd;
   border-radius: 40px;
-  backdrop-filter: blur(15px) brightness(110%);
+  backdrop-filter: blur(15px) brightness(130%);
   //background: linear-gradient(180deg,linear-gradient(to right, #00DE63, #1DC9E6));
   box-shadow: 2px 5px 50px 10px rgba(0, 0, 0, 0.1);
-  .RecommendInfoContainer::before {
+  .AboutPageMembersZone::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -83,16 +84,15 @@ const AboutPageMembersZone = styled.div`
 const AboutPageMembersZoneTitle = styled.div`
   height: 80px;
   width: 100%;
-  background-color: green;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  color: white;
+  //box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
 `;
 
 const AboutPageMembersInfoContainer = styled.div`
-  height: 300px;
+  height: 500px;
   width: 100%;
-  background-color: red;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+//  background-color: red;
   display: grid;
   grid-template-columns: 250px 250px 250px 250px;
 //  row-gap: 10px;
@@ -102,22 +102,27 @@ const AboutPageMembersInfoContainer = styled.div`
 `;
 
 const AboutPageMembersInfoElements = styled.div`
-  height: 250px;
+  height: 400px;
   width: 250px;
-  background-color: #b37878;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffffb3;
+  box-shadow: 1px 1px 30px 6px rgba(117, 230, 196, 0.842);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 40px;
 `;
 
 const AboutPageMemberPhoto = styled.div`
   height: 100px;
   width: 100px;
-  background-color: blue;
+  backdrop-filter: blur(50px) brightness(100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: #8c8ca797;
   border-radius: 50%;
   z-index: 99;
+  margin-bottom: 10px;
 `
 
 function About() {
@@ -128,33 +133,89 @@ function About() {
       <AboutPageWorkingArea name="AboutPageWorkingArea">
         <AboutPageMembersZone name="AboutPageMembersZone">
           <AboutPageMembersZoneTitle>
-                  <div className="member-title">Title here</div>
-                  <div className="member-subtitle">Subtitle here</div>
+                  <div className="member-title">ABOUT</div>
+                  <div className="member-subtitle">Place AI, 누가 만들었나요?</div>
           </AboutPageMembersZoneTitle>
           <AboutPageMembersInfoContainer>
             <AboutPageMembersInfoElements className='fontSet'>
-                   <AboutPageMemberPhoto
+                   <AboutPageMemberPhoto style={{ marginTop: "10px"}}
                     src={`${process.env.PUBLIC_URL}/img/logo_white.png`}
                     className='Logo_white'
                     alt='logoWhite'
                     />
                       <div className="profile-name">전지원</div>
-                      <div className="profile-position"Product Manager />
-                      <div className="profile-position" Frontend Developer />
-                      <div className="profile-info">info here</div>
-                      <button className="profile-link"
-                              type="button"
-                              onclick="location.href='https://github.com/journey-ai'">
-                          <div className="profile-logo"
-                          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                          height="20px"/>
+                      <div className='alignRow' style={{ marginTop: "5px"}}>
+                      <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "white" }}>기획/PM</div>
+                        <div className="profile-position" style={{ backgroundColor: "BLUE", color:"white" }}> FE</div>
+                      </div>
+                      <div className="profile-info">
+                        <RiDoubleQuotesL /> AIoT 좋 아 요 <RiDoubleQuotesR />
+                      </div>
+                      <button className="gitButton"
+                        type="button"
+                        onclick="location.href='https://github.com/journey-ai'">
+                          <RiGithubFill  className="gitLogo"/>
                       </button>
             </AboutPageMembersInfoElements>
             <AboutPageMembersInfoElements>
+            <AboutPageMemberPhoto style={{ marginTop: "10px"}}
+                    src={`${process.env.PUBLIC_URL}/img/logo_white.png`}
+                    className='Logo_white'
+                    alt='logoWhite'
+                    />
+                      <div className="profile-name">오유림</div>
+                      <div className='alignRow' style={{ marginTop: "5px"}}>
+                      <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "purple", color:"orange" }}>BE</div>
+                        <div className="profile-position" style={{ backgroundColor: "orange", color:"white" }}> DE</div>
+                      </div>
+                      <div className="profile-info">
+                      <RiDoubleQuotesL /> 시키면 해낸다 <RiDoubleQuotesR />
+                      </div>
+                      <button className="gitButton"
+                        type="button"
+                        onclick="location.href='https://github.com/journey-ai'">
+                          <RiGithubFill  className="gitLogo"/>
+                      </button>
             </AboutPageMembersInfoElements>
             <AboutPageMembersInfoElements>
+            <AboutPageMemberPhoto style={{ marginTop: "10px"}}
+                    src={`${process.env.PUBLIC_URL}/img/logo_white.png`}
+                    className='Logo_white'
+                    alt='logoWhite'
+                    />
+                      <div className="profile-name">임락균</div>
+                      <div className='alignRow' style={{ marginTop: "5px"}}>
+                      <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "GREEN", color:"white" }}>DS</div>
+                        <div className="profile-position" style={{ backgroundColor: "red", color:"yellow" }}> MLE</div>
+                      </div>
+                      <div className="profile-info">
+                      <RiDoubleQuotesL /> 어딘가 천재가 분명함 <RiDoubleQuotesR />
+                      </div>
+                      <button className="gitButton"
+                        type="button"
+                        onclick="location.href='https://github.com/journey-ai'">
+                          <RiGithubFill  className="gitLogo"/>
+                      </button>
             </AboutPageMembersInfoElements>
             <AboutPageMembersInfoElements>
+            <AboutPageMemberPhoto style={{ marginTop: "10px"}}
+                    src={`${process.env.PUBLIC_URL}/img/logo_white.png`}
+                    className='Logo_white'
+                    alt='logoWhite'
+                    />
+                      <div className="profile-name">박난</div>
+                      <div className='alignRow' style={{ marginTop: "5px"}}>
+                      <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "GREEN", color:"white" }}>DS</div>
+                        <div className="profile-position" style={{ backgroundColor: "red", color:"yellow" }}> MLE</div>
+                      </div>
+                      <div className="profile-info">
+                      <RiDoubleQuotesL /> 막내가 선배지 <RiDoubleQuotesR />
+                      </div>
+                      <button className="gitButton"
+                        type="button"
+                        onclick="location.href='https://github.com/journey-ai'">
+                          <RiGithubFill  className="gitLogo"/>
+                      </button>
             </AboutPageMembersInfoElements>
 
           </AboutPageMembersInfoContainer>

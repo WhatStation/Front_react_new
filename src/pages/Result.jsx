@@ -6,7 +6,7 @@ import '../App.css';
 import Map from '../modules/Map';
 import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../modules/PopupContainer'; 
 import KeywordButton from '../component/KeywordButton'; 
-import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, MainContainer, RecommendInfoContainer,RecommendedStoreContainer, RecommendLetter, RecommendedStoreDetail, TitleOfRecommendedStoreTags, RecommendedStoreTags, SubStoreContainer, Substoreletter, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, RecommendedStoreKeyword, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
+import {  Logo, Bubble1, Bubble2, Bubble3, ResultPageContainer, ImageContainer, MainContainer, RecommendInfoContainer,RecommendedStoreContainer, RecommendLetter, RecommendedStoreDetail, TitleOfRecommendedStoreTags, RecommendedStoreTags, SubStoreContainer, Substoreletter, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, RecommendedStoreKeyword, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
 //import { RiSendPlaneFill } from "react-icons/ri";
 //import { RiCheckFill } from "react-icons/ri";
 import {API} from '../config'; 
@@ -88,7 +88,7 @@ function Result() {
   //정보를 갖고있을때만 아래것을 리턴!
 
   return (
-    <Container name='Container'>
+    <ResultPageContainer name='ResultPageContainer'>
       <ResultTagContainer name='ResultTagContainer'>
       <ResultTag style={{ fontSize: state.data.result_tags.join(', ').length > 16 ? '1.7rem' : state.data.result_tags.join(', ').length > 13 ? '2.3rem' : 'inherit' }}>
         {state.data.result_tags.join(', ')}
@@ -290,7 +290,7 @@ function Result() {
         <PopupTextSmall>🐧감사합니다🐧</PopupTextSmall>
         <PopupButton onClick={() => setShowPopup(false)}>별말씀을요</PopupButton>
       </PopupContainer>
-    </Container>
+    </ResultPageContainer>
   );
 }
 

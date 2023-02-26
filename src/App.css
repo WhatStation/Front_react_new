@@ -5,6 +5,16 @@
 }
 
 
+/*정렬용*/
+
+.alignRow{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+} 
 
 
 /*디버깅용*/
@@ -702,19 +712,15 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 .member-title {
   position: relative;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 800;
   font-family: 'Nanum Gothic', sans-serif;
+  text-shadow: 0 0 2px #ffffff, 0 0 2px #bee0e6, 0 0 1px #25b16b, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4489ac92, 0 0 7px #7fb1cea2;
 }
 
 .member-subtitle {
-  font-size: 24px;
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
-.member-box {
-  margin-top: 30px;
-  width: 25%;
-  float: left;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 0 0 1px #25b16b, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4489ac92, 0 0 7px #7fb1cea2;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -743,30 +749,43 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 }
 
 .profile-name {
-  font-weight: bold;
+  font-weight: 800;
+  font-size: 18px;
   font-family: 'Nanum Gothic', sans-serif;
+  text-shadow: 0 0 8px #ffffff, 0 0 1px #fafafa, 0 0 1px #25bb70, 0 0 1px #23ebab, 0 0 1px #1bc07e, 0 0 3px #13684b, 0 0 4px #4890b43d, 0 0 7px #1680be3b;
 }
 
 .profile-position {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Nanum Gothic', sans-serif;
+  font-size: 12px;
+  padding: 6px;
+  min-width: 40px;
+  background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 5px 20px rgba(147, 246, 253, 0.3), 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .profile-info {
   height: 35px;
   font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 1px #25b16b, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 1px #05583692, 0 0 7px #7fb1cea2;
+}
+.gitLogo{
+  background: bl;
+  color:black;
+  border-color: none;
+  font-size: 30px;
 }
 
-.profile-link {
-  background-color: #fff;
-  border: 0px;
-  font-family: 'Nanum Gothic', sans-serif;
+.gitButton{
+  margin-bottom: 10px;
+  border:none;
+  background: transparent;
 }
-
-
-
 
 
  /* background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);*/

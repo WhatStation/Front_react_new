@@ -7,10 +7,10 @@ import '../App.css';
 
 
 
-export const Container = styled.div`
+export const ResultPageContainer = styled.div`
   min-width: 1900px;
-  width: 100vw;
-  height: 100vh;
+  width: 1920;
+  height: 1080;
   z-index: 1;
   display: flex;
 
@@ -402,7 +402,7 @@ export const Bubble1 = styled.div`
 
 export const Bubble2 = styled.div`
   position: absolute; 
-  margin-top: 24vh;
+  margin-top: 28vh;
   width: 150px;
   height: 140px;
   z-index: -1;
@@ -410,9 +410,9 @@ export const Bubble2 = styled.div`
   right: 930px;
   border-radius: 47%;
   border: solid #51e795 1px;
-  background: linear-gradient(800deg, #81fdb9, #61bfcf),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  background: linear-gradient(800deg, #81fdb9b9, #61bfcf),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
   //backdrop-filter: blur(20px) brightness(100%);
-  box-shadow: 1px 1px 40px 20px rgba(117, 230, 196, 0.842);
+  box-shadow: 1px 1px 20px 10px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
 `;
 
@@ -436,11 +436,12 @@ export const Bubble3 = styled.div`
 
 export const Logo = styled.div`
   position: absolute; 
-  margin-top: 120px;
-  width: 800px;
-  height: 800px;
+  margin-top: 0px;
+  width: 1200px;
+  height: 100vh;
+  margin-left: 200px;
   z-index: -3;
-  right:1200px;
+  right: 1000px;
   z-index: 1;
   opacity: 0.4;
   background-repeat: no-repeat;
