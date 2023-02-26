@@ -153,10 +153,10 @@ function Result() {
                   fontSize: state.data.main_store.tags.length > 9 ? '0.9rem' : '1.1rem'
                 }}>
                   {state.data.main_store.tags.reduce((result, tag, index) => {
-                    if (index % 2 === 0) {
+                    if (index % 4 === 0) {
                       result.push([tag]);
                     } else {
-                      result[Math.floor(index/2)].push(tag);
+                      result[Math.floor(index/4)].push(tag);
                     }
                     return result;
                   }, []).map((tags, index, array) => (
