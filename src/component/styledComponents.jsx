@@ -244,7 +244,7 @@ export const ResultTagContainer = styled.div`
   position: absolute;
   width: 600px;
   height: 150px;
-  margin-left: 1100px;
+  margin-left: 1050px;
   margin-right: 50rem;
   top: 240px;
   display: flex;
