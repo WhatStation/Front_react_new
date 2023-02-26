@@ -24,6 +24,11 @@
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+.fontSet{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
 .Zindex9999{
   z-index: 9999;
 }
@@ -479,6 +484,7 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   border:none;
   border-radius: 20px;
   color: #0a4b40;
+  opacity: 0.3;
   padding: 20px 20px;
   text-align: center;
   justify-content: center;
@@ -682,6 +688,85 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 .papereffect{
 
 }
+
+
+/*About*/
+
+
+#member-header {
+  text-align: center;
+  color: rgb(77, 53, 3);
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.member-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.member-subtitle {
+  font-size: 24px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.member-box {
+  margin-top: 30px;
+  width: 25%;
+  float: left;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.member-detail {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(77, 53, 3);
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.member-imagebox {
+  width: 100%;
+  height: 50px;
+  float: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.profile-image {
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.profile-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.profile-info {
+  height: 35px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.profile-link {
+  background-color: #fff;
+  border: 0px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+
 
 
  /* background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);*/

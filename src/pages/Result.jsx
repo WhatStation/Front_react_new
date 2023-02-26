@@ -1,25 +1,16 @@
 import { React, useState } from 'react';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 import { useLocation } from "react-router"
 import axios from 'axios';
 import '../App.css';
 import Map from '../modules/Map';
 import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../modules/PopupContainer'; 
 import KeywordButton from '../component/KeywordButton'; 
-import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecommendedStoreContainer, RecommendLetter, RecommendedStoreDetail, TitleOfRecommendedStoreTags, RecommendedStoreTags, SubStoreContainer, Substoreletter, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, RecommendedStoreKeyword, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
+import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, MainContainer, RecommendInfoContainer,RecommendedStoreContainer, RecommendLetter, RecommendedStoreDetail, TitleOfRecommendedStoreTags, RecommendedStoreTags, SubStoreContainer, Substoreletter, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, RecommendedStoreKeyword, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
 //import { RiSendPlaneFill } from "react-icons/ri";
-import { RiCheckFill } from "react-icons/ri";
+//import { RiCheckFill } from "react-icons/ri";
 import {API} from '../config'; 
 const API_URL = API.SEARCH
-
-
-const MiddlePartAlign = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: #0a4b40;
-  width: 30vh;
-  height: 100vh;
-;`
 
 
 function Result() {

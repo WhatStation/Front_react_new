@@ -13,6 +13,7 @@ const NavBarElements = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto Nav-font">
               <Nav.Link eventkey="i" as={Link} to="/">Home</Nav.Link>
+              <Nav.Link eventkey={"i"} as={Link} to="/about">About</Nav.Link>
               <Nav.Link eventkey="i" as={Link} to="/Search">Search</Nav.Link>
               <NavDropdown eventkey="i" title="review" id="collasible-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/WriteReview">리뷰 쓰기</NavDropdown.Item>
