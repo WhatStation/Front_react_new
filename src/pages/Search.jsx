@@ -47,8 +47,8 @@ const Search = () => {
           <div style={{ position: "relative" }}>
             <input className='SearchInput'
               type="text"
-              maxLength='30'
-              placeholder='키워드 중심으로 검색해주세요! 예) 아늑하고 가성비있는 넓은 식당'
+              maxLength='100'
+              placeholder='키워드 중심으로 검색해주세요! 예) 아늑하고 가성비있는 넓은 식당' 
               value={searchInput}
               onChange={handleChange}
             />

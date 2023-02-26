@@ -79,15 +79,15 @@ const Button = styled(Link)`
   }
 
   &::before {
-    content: "";
+    content: " ";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    //transform: translate(-50%, -50%) scale(1);
     border-radius: 50%;
     opacity: 0;
-    z-index: 98;
-    animation: ${glitter} 1s infinite;
+    z-index: 10;
+//    animation: ${glitter} 1s infinite;
   }
 
   &::after {
@@ -97,23 +97,30 @@ const Button = styled(Link)`
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background: linear-gradient(to right, #ceecc5, #68fcf2);
+//    background: linear-gradient(to right, #ceecc5, #68fcf2);
     border-radius: 10px;
-    z-index: 98;
+    color: #ffffff;
+    z-index: 10;
     opacity: 0;
-    transition: opacity 0.65s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
   }
 
   &:hover {
     background: linear-gradient(to right, #51e795, #4cc4da);
-    color: white;
+    //background: linear-gradient(to right, #ceecc5, #68fcf2);
+    transition: opacity 0.35s ease-in-out;
+    color: #ffffffd8;
     box-shadow: 2px 2px 5px #1DD991;
-    z-index: 98;
+    //text-shadow: 0 0 2px #ffffff, 0 0 2px #bad8cc14, 0 0 1px #25bb70, 0 0 1px #9fc7ba2b, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 2px #4890b49e, 0 0 7px #1680bea2;
+    
+    z-index: 99;
   }
-
-  &:hover::after {
-    opacity: 1;
-  }
+  
+//  &:hover::after {
+//    opacity: 0;
+//    color: #000000;
+//    z-index: 99;
+//  }
 `;
 
 const fadeUp = keyframes`
@@ -161,6 +168,29 @@ const Title = styled.h1`
   @media only screen and (max-width: 1100px) {
     font-size: 3rem;
     top: calc(54% - 4rem);
+  }
+`;
+
+const Notice = styled.h1`
+  color: rgb(255, 255, 255);
+  font-size: 0.7rem;
+  font-weight: 100;
+  text-align: center;
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.8), 
+	  0px 0px 1px rgba(255, 255, 255, 0.8);
+  position: absolute; 
+  top: calc(50% +  10rem); 
+  left: calc(30% - 10rem);
+  right: calc(30% - 10rem);
+  transform: translate(-50%, -50%); 
+  animation: ${fadeUp} 1s ease-in-out forwards;
+  animation-fill-mode: forwards;
+  z-index: 3;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 1rem;
+    top: calc(50% +  11.5rem); 
   }
 `;
 
@@ -216,8 +246,10 @@ function Home() {
           className='Logo_white'
           alt='logoWhite'
         />
-        <Button name = "Button" to="/Search">네, 알려드릴게요</Button>
-        <Title className='fontBold'>Place AI, 감성 맞춤 홍대 식당 알려줘</Title>
+        <Button name = "Button" to="/Search">네, 맞춰볼게요</Button>
+        
+        <Notice className='fontBold'>*홍익대 반경 2km 이내만 검색됩니다.</Notice>
+        <Title className='fontBold'>Place AI, 내가 상상하는 홍대 근처 식당 맞춰봐</Title>
       </Wrapper>
     </Container>
   );

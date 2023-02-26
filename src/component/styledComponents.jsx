@@ -20,7 +20,7 @@ export const MainContainer = styled.div`
   margin-top: 20vh;
   background-attachment: fixed;
   //backdrop-filter: blur(20px) brightness(120%);
-  padding: 7rem;
+  padding: 130px;
   display: flex;
   flex-direction: row; 
   position: relative;
@@ -28,7 +28,7 @@ export const MainContainer = styled.div`
   min-width: 1900px;
   height: 47rem;
 //  background-position: 50% 30%; 
-  z-index: 1;
+  z-index: 9999;
   background-color: transparent;
 
   @media only screen and (max-width: 1400px) {
@@ -48,20 +48,20 @@ export const MainContainer = styled.div`
 
 export const RecommendInfoContainer = styled.div`
   display: flex;
-  margin-top: 1.8rem;
+  margin-top: 1.1rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 850px;
-  padding: 2vw;
+  padding: 40px;
   justify-content: space-between;
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 40px;
-  backdrop-filter: blur(7px) brightness(103%);
-  background: linear-gradient(180deg,linear-gradient(to right, #00DE63, #1DC9E6));
+  backdrop-filter: blur(15px) brightness(110%);
+  //background: linear-gradient(180deg,linear-gradient(to right, #00DE63, #1DC9E6));
   box-shadow: 2px 5px 50px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 9999;
   //min-width: 100px;
   //min-height: 400px; 
   .RecommendInfoContainer::before {
@@ -71,13 +71,14 @@ export const RecommendInfoContainer = styled.div`
     border-radius: 40px;
     backdrop-filter: blur(50px) brightness(100%);
     box-shadow: 2px 5px 50px 20px rgba(255, 255, 255, 0.1);
-    background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
-    z-index: -1;
+    //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+    background: linear-gradient(to right,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8));
+    z-index: 1;
   }
 
 `;
 
-export const RecomendedStoreContainer = styled.div`
+export const RecommendedStoreContainer = styled.div`
   font-family: 'Nanum Gothic', sans-serif;
   align-items: center;
   display: flex;
@@ -92,8 +93,18 @@ export const RecomendedStoreContainer = styled.div`
 }
 `;
 
-export const RecomendedStoreDetail = styled.div`
-  align-items: center;
+export const RecommendLetter = styled.div`
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #1DD991, #1DC9E6);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 20px;
+  margin-top:20px;
+`;
+
+
+export const RecommendedStoreDetail = styled.div`
   height: 2.3rem;
   display: flex;
   justify-content: center;
@@ -104,6 +115,69 @@ export const RecomendedStoreDetail = styled.div`
  // flex-wrap: wrap;
   justify-content: space-between;
 `;
+
+
+export const RecommendedStoreKeyword = styled.div`
+  align-items: center;
+  height: 5rem;
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5px;
+  padding: 5px;
+  font-family: 'Nanum Gothic', sans-serif;
+  //  text-align: center;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 20px;
+  backdrop-filter: blur(50px) brightness(100%);
+  box-shadow: 2px 5px 50px 20px rgba(255, 255, 255, 0.1);
+  //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  //background: linear-gradient(to right, #3ddfbc, #1DC9E6);
+  background: linear-gradient(to right, #81fdb9, #80dbeb);
+ 
+  z-index: 1;
+  `;
+  
+  export const TitleOfRecommendedStoreTags = styled.div`
+    color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    z-index: 1;
+    border:none;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 750;
+    text-shadow: 0 0 2px #ffffff, 0 0 2px #bee0e6, 0 0 1px #25b16b, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4489ac92, 0 0 7px #7fb1cea2;
+
+    `;
+  
+  export const RecommendedStoreTags = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    width: 12rem;
+    height: 40px;
+    z-index: 1;
+    color: #000000;
+    border:none;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family:'Nanum Gothic', sans-serif;
+    text-shadow: 0 0 2px #ffffff, 0 0 2px #bad8cc81, 0 0 1px #25bb70, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4890b49e, 0 0 7px #1680bea2;
+  `;
+
 
 export const SubStoreContainer = styled.div`
   font-family: 'Nanum Gothic', sans-serif;
@@ -124,38 +198,39 @@ export const SubStoreContainer = styled.div`
 `;
 
 export const SubStoreDetail = styled.div`
-  align-items: center;
   height: 2.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-family: 'Nanum Gothic', sans-serif;
 //  text-align: center;
  // flex-wrap: wrap;
-  justify-content: space-between;
 `;
 
 
 
 export const ReactionContainer = styled.div`
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
   height: 100%;
-  width: 50%;
+  width: 700px;
+//  border: solid black 1px;
   justify-content: center;
   .keyWordTag {
     row-gap: 1px;
     column-gap: 2px;
     flex-wrap: wrap;
     display: flex;
+    background-attachment: fixed;
     justify-content: center;
     align-items: center;
-    width: 35vw;
-    z-index: 9999;
+    width:500px;
+    z-index: 1;
     margin-bottom: 20px;
   }
 `;
@@ -174,10 +249,13 @@ export const ResultTagContainer = styled.div`
   top: 240px;
   display: flex;
 
-  text-shadow: 0 0 10px #ffffff32, 0 0 10px rgba(255, 255, 255, 0),
-               3px 0px 5px rgba(152, 248, 255, 0.226), 0 6px 70px rgba(77, 213, 255, 0.651),
-               0 5px 80px rgba(162, 255, 185, 0.719);
-  background: linear-gradient(to right, #00DE63, #1DC9E6);
+  text-shadow: 
+               3px 1px 150px rgba(152, 255, 221, 0.226), 0 1px 15px rgba(77, 213, 255, 0.308),
+               0 1px 15px rgba(162, 255, 185, 0.575), 0 0 5px #42f5bf25, 0 0 10px rgba(255, 255, 255, 0);
+  //  text-shadow: 0 0 10px #ffffff32, 0 0 10px rgba(255, 255, 255, 0),
+  //3px 0px 5px rgba(152, 248, 255, 0.226), 0 6px 70px rgba(77, 213, 255, 0.651),
+  //             0 5px 80px rgba(162, 255, 185, 0.719);
+  background: linear-gradient(to right, #3ddfbc, #1DC9E6);  
   color: transparent;
   -webkit-background-clip: text;
   font-size: 3.3rem;
@@ -221,21 +299,25 @@ export const TitleOfInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  width: 100px;
-  height: 40px;
+  font-weight: 500;
+  width: 90px;
+  height: 30px;
   margin-right: 10px;
   z-index: 9999;
-  font-size:1.2rem;
-  color: black;
+  font-size:1rem;
+//  color: #3ddfbc;
+  background: linear-gradient(to right, #53e4c0, #53cee4);
+  color: white;
   margin-right: 2rem;
+  border-radius: 17px;
+  
   border:none;
   vertical-align: middle;
   text-align: center;
   justify-content: center;
   align-items: center;
   font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 900;
+  font-weight: 750;
 `;
 
 export const ContentsOfInfo = styled.div`
@@ -248,7 +330,8 @@ export const ContentsOfInfo = styled.div`
   margin-right: 10px;
   z-index: 9999;
   font-size:1.05rem;
-  //color: ;
+  color: #000000;
+
   border:none;
   vertical-align: middle;
   text-align: center;
@@ -256,32 +339,58 @@ export const ContentsOfInfo = styled.div`
   align-items: center;
   font-family:'Nanum Gothic', sans-serif;
   font-weight: 900;
+  //box-shadow: inset 0 -20px 0 orange;
+  //line-height: 5px;
+`;
+
+export const Substoreletter = styled.ul`
+  font-family: 'Nanum Gothic', sans-serif;
+  color: rgba(0, 0, 0, 0.979);
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  width: 30vw;
+  height: 3vh;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-shadow: 0 0 2px #ffffff, 0 0 3px #ffffffd5, 0 0 1px #25bb70, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4890b49e, 0 0 7px #1680bea2;
+  //text-shadow: 0 0 1px #ffffff, 0 0 5px #267e5c, 0 0 30px #25bb70, 0 0 40px #9fc7ba, 0 0 70px #9ef0ce, 0 0 80px #37b88d, 0 0 100px #1681b3, 0 0 10px #4b7da5;
 `;
 
 export const SubStoreList = styled.ul`
-  color:rgba(255, 255, 255, 0.979);
+  color:rgb(0, 0, 0);
   font-family: 'Nanum Gothic', sans-serif;
   list-style-type: square;
-  z-index: 9999;
+  z-index: 2;
+  font-weight:50;
+  text-shadow: 0 0 2px #ffffff, 0 0 3px #fffdfdc1, 0 0 1px #25bb70, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4890b49e, 0 0 7px #1680bea2;
+  //text-shadow: 0 0 1px #ffffff, 0 0 5px #449e7c, 0 0 15px #25bb70, 0 0 10px #9fc7ba, 0 0 20px #a2e4ca, 0 0 10px #c3dbd3, 0 0 5px #1c97cf, 0 0 10px #1681be;
 `;
 
 
 export const ImageContainer = styled.div`
-  position: absolute; 
-  margin-top: 19vh;
-  width: 100vw;
-  height: 65vh;
-  z-index: -1;
+  position: absolute;
+  display :flex ;
+  margin-top: 0px;
+  background-attachment: fixed;
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 1850px;
+  min-width: 1900px;
+//  height: 7;
+  z-index: 1;
 `;
 
 export const Bubble1 = styled.div`
   position: absolute; 
-  margin-top: 38vh;
+  margin-top: 40vh;
   width: 260px;
   height: 260px;
-  z-index: -1;
+  z-index: 2;
   opacity: 0.7;
-  right:820px;
+  right:730px;
   border-radius: 45%;
   border: solid #51e795 1px;
   background: linear-gradient(180deg, #6afaab, #53cee4),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
@@ -293,12 +402,12 @@ export const Bubble1 = styled.div`
 
 export const Bubble2 = styled.div`
   position: absolute; 
-  margin-top: 22vh;
+  margin-top: 24vh;
   width: 150px;
   height: 140px;
   z-index: -1;
   opacity: 0.6;
-  right:1020px;
+  right: 930px;
   border-radius: 47%;
   border: solid #51e795 1px;
   background: linear-gradient(800deg, #81fdb9, #61bfcf),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
@@ -309,11 +418,13 @@ export const Bubble2 = styled.div`
 
 export const Bubble3 = styled.div`
   position: absolute; 
-  margin-top: 60.5vh;
+  margin-top: 62.5vh;
+  background-attachment: fixed;
   width: 78px;
   height: 83px;
   opacity: 0.9;
-  right:980px;
+  right:910px;
+  z-index: 3;
   border-radius: 45%;
   border: solid #51e795 1px;
   background: linear-gradient(30deg, #6afaab, #53cee4),linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
@@ -325,22 +436,22 @@ export const Bubble3 = styled.div`
 
 export const Logo = styled.div`
   position: absolute; 
-  margin-top: 167px;
-  width: 120px;
-  height: 160px;
-  z-index: -1;
-  right:1100px;
-  z-index: 9999;
-  opacity: 0.8;
+  margin-top: 120px;
+  width: 800px;
+  height: 800px;
+  z-index: -3;
+  right:1200px;
+  z-index: 1;
+  opacity: 0.4;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  background-image: url("./img/logo_white.png");
+  background-image: url("./img/logo_bright.png");
 `;
 
 
 
-
+/*
 
 export const Image = styled.div`
   position: absolute; 
@@ -366,8 +477,7 @@ export const Image = styled.div`
       rgba(153, 255, 122, 0.295),
       rgba(255, 255, 255, 0)
     ),url("./img/Result3.png");
-    background-repeat: no-repeat;
-    position: absolute; 
+    background-repeat: no-repeat; 
     object-fit: cover;
     border-radius: 30px;
     width: 100%;
@@ -377,6 +487,8 @@ export const Image = styled.div`
     mix-blend-mode: overlay;
   }
 `;
+
+*/
 
 /*
 export const ResultTagContainer = styled.div`

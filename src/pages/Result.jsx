@@ -6,8 +6,9 @@ import '../App.css';
 import Map from '../modules/Map';
 import { PopupContainer, PopupTextBig, PopupTextSmall, PopupButton } from '../modules/PopupContainer'; 
 import KeywordButton from '../component/KeywordButton'; 
-import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecomendedStoreContainer, RecomendedStoreDetail, SubStoreContainer, SubStoreDetail, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
-import { RiSendPlaneFill } from "react-icons/ri";
+import {  Logo, Bubble1, Bubble2, Bubble3, Container, ImageContainer, Image, MainContainer, RecommendInfoContainer,RecommendedStoreContainer, RecommendLetter, RecommendedStoreDetail, TitleOfRecommendedStoreTags, RecommendedStoreTags, SubStoreContainer, Substoreletter, ReactionContainer, ResultTagContainer, TopTitle, ResultTag, RecommendedStoreKeyword, TitleOfInfo, ContentsOfInfo, SubStoreList} from '../component/styledComponents'; 
+//import { RiSendPlaneFill } from "react-icons/ri";
+import { RiCheckFill } from "react-icons/ri";
 import {API} from '../config'; 
 const API_URL = API.SEARCH
 
@@ -98,70 +99,88 @@ function Result() {
   return (
     <Container name='Container'>
       <ResultTagContainer name='ResultTagContainer'>
-      <ResultTag>{state.data.result_tags.join(', ')}</ResultTag>
-          <TopTitle name='TopTitle'>장소를 찾았어요!</TopTitle>
+      <ResultTag style={{ fontSize: state.data.result_tags.join(', ').length > 16 ? '1.7rem' : state.data.result_tags.join(', ').length > 13 ? '2.3rem' : 'inherit' }}>
+        {state.data.result_tags.join(', ')}
+      </ResultTag>
+        <TopTitle name='TopTitle'>장소를 찾았어요!</TopTitle>
       </ResultTagContainer>
       <ImageContainer name="ImageContainer">
-          <Image name="Image"/>
-      </ImageContainer>
+          {/*}Image name="Image"/>*/}
+      
       <Bubble1 name="Bubble1" />
       <Bubble2 name="Bubble2" />
       <Bubble3 name="Bubble3" />
-      <Logo />
+      <Logo name="Logo" />
+      </ImageContainer>
       <MainContainer name='MainContainer'>
           <RecommendInfoContainer name='RecommendInfoContainer'>
-              <Map name='Map' />
-              <RecomendedStoreContainer>
+            <Map name='Map' station={state.data.main_store.station} />
+              <RecommendedStoreContainer>
                 { state && (
                     <>
-                    <div name='RecomendLetter'style={{fontSize:'1.8rem', fontWeight:'800', color:'black', marginBottom:'20px',marginTop:'20px'}}> 🐱‍🏍 Place AI 추천 </div>
-                      <RecomendedStoreDetail name="RecomendedStoreDetail">
-                        <TitleOfInfo>
+                    <RecommendLetter name='RecommendLetter'> ⭐ Place AI 추천 </RecommendLetter>
+                      <RecommendedStoreDetail name="RecommendedStoreDetail">
+                        <TitleOfInfo name ="TitleOfInfo">
                           가게명:
                         </TitleOfInfo>
-                        <ContentsOfInfo>
+                        <ContentsOfInfo name="ContentsOfInfo">
                           {state["data"].main_store.name}
                         </ContentsOfInfo>
-                      </RecomendedStoreDetail>
-                      <RecomendedStoreDetail name="RecomendedStoreDetail">
+                      </RecommendedStoreDetail>
+                      <RecommendedStoreDetail name="RecommendedStoreDetail">
                         <TitleOfInfo>
                           역이름:
                         </TitleOfInfo>
                         <ContentsOfInfo>
                         {state.data.main_store.station}
                         </ContentsOfInfo>
-                      </RecomendedStoreDetail>
-                      <RecomendedStoreDetail name="RecomendedStoreDetail">
+                      </RecommendedStoreDetail>
+                      <RecommendedStoreDetail name="RecommendedStoreDetail">
                         <TitleOfInfo>
                           이용 호선:
                         </TitleOfInfo>
                         <ContentsOfInfo>
                          {state.data.main_store.line.join(', ')}
                         </ContentsOfInfo>
-                      </RecomendedStoreDetail>
-                      <RecomendedStoreDetail name="RecomendedStoreDetail">
-                        <TitleOfInfo>
-                          연관 태그:
-                        </TitleOfInfo>
-                        <ContentsOfInfo>
-                          {state.data.main_store.tags.join(', ')}
-                        </ContentsOfInfo>
-                      </RecomendedStoreDetail>
-                      <RecomendedStoreDetail name="RecomendedStoreDetail">
+                      </RecommendedStoreDetail>
+                      <RecommendedStoreDetail name="RecommendedStoreDetail">
                         <TitleOfInfo>
                           도보 시간:
                         </TitleOfInfo>
                         <ContentsOfInfo>
                           {state.data.main_store.walking_time}분
                         </ContentsOfInfo>
-                      </RecomendedStoreDetail>
+                      </RecommendedStoreDetail>
                     </>
                 )}
-                </RecomendedStoreContainer>
+              <RecommendedStoreKeyword name="RecommendedStoreKeyword">
+                <TitleOfRecommendedStoreTags style={{
+                  fontSize: state.data.main_store.tags.join(', ').length > 9 ? '1.2rem' : '1.2rem' }}>
+                  연관 태그
+                </TitleOfRecommendedStoreTags>
+                <RecommendedStoreTags style={{
+                  fontSize: state.data.main_store.tags.length > 9 ? '0.9rem' : '1.1rem'
+                }}>
+                  {state.data.main_store.tags.reduce((result, tag, index) => {
+                    if (index % 2 === 0) {
+                      result.push([tag]);
+                    } else {
+                      result[Math.floor(index/2)].push(tag);
+                    }
+                    return result;
+                  }, []).map((tags, index, array) => (
+                    <div key={index}>
+                      {tags.join(' ')}
+                      {index !== array.length - 1 && <br />}
+                    </div>
+                  ))}
+                </RecommendedStoreTags>            
+              </RecommendedStoreKeyword>
+            </RecommendedStoreContainer>
           </RecommendInfoContainer>
           <SubStoreContainer name='SubStoreContainer'>
             <div className="papereffect" />
-                <div className='substoreletter'> 유사도 높은 음식점</div>
+                <Substoreletter> 유사도 높은 음식점 </Substoreletter>
                   <SubStoreList>
                     { state && (
                       state.data.sub_stores.map((store, index) => (
@@ -171,7 +190,7 @@ function Result() {
                 </SubStoreList>
               </SubStoreContainer>
           <ReactionContainer name='ReactionContainer'>
-                <div className='FeedbackQuestion1'>Place AI가 잘 해냈나요? </div>
+                <div className='FeedbackQuestion1'>Place AI가 잘 추천했나요? </div>
 
                 <div className='FeedbackTag'>
                   <KeywordButton
@@ -185,7 +204,7 @@ function Result() {
                     onClick={() => toggleFeedback("thumbs_down")}
                   />
                 </div>
-                <div className="FeedbackQuestion2">이 식당과 더욱 어울리는 키워드를 추천해주세요!</div>
+                <div className="FeedbackQuestion2">검색할 때 상상하셨던 분위기를 알려주세요.</div>
               <div className='keyWordTag'>
                 <KeywordButton
                   text="#가성비있는"
@@ -267,7 +286,8 @@ function Result() {
               <div name='no6'>
                 <button className='FeedbackSubmitButton' onClick={handleSubmit}>
                   <div>
-                    <RiSendPlaneFill />
+                    {/*<RiSendPlaneFill />*/}
+                    피드백 제출 
                   </div>
                 </button>
                 </div>

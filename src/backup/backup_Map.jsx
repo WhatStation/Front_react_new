@@ -7,34 +7,31 @@ const MapContainer = styled.div`
     z-index: 9999;
 `;
 
-const STATION_COORDS = {
-  '가좌역': [37.568465, 126.914778],
-  '경의중앙 신촌역': [37.559778, 126.942308],
-  '망원역': [37.556328, 126.910351],
-  '상수역': [37.547716, 126.921358],
-  '서강대역': [37.551881, 126.938543],
-  '신촌역': [37.555134, 126.936893],
-  '이대역': [37.556733, 126.946013],
-  '합정역': [37.549442, 126.913739],
-  '홍대입구역': [37.557192, 126.925381],
-  'default': [37.5579479, 127.040481],
-};
-
-function Map({ station }) {
+function Map() {
   const mapRef = useRef(null);
 
   useEffect(() => {
     const { naver } = window;
-    const coords = STATION_COORDS[station] || STATION_COORDS['default'];
-    const center = new naver.maps.LatLng(coords[0], coords[1]);
-    const position = new naver.maps.LatLng(coords[0], coords[1]);
+    let center;
+    let position;
+
+    if (station === 'japjeong station') {
+      center = new naver.maps.LatLng(37.549442, 126.913739);
+      position = new naver.maps.LatLng(37.549442, 126.913739);
+    } else if (station === 'Shinchon Station') {
+      center = new naver.maps.LatLng(37.555134, 126.936893);
+      position = new naver.maps.LatLng(37.555134, 126.936893);
+    } else {
+      center = new naver.maps.LatLng(37.5579479, 127.040481);
+      position = new naver.maps.LatLng(37.5579479, 127.040481);
+    }
 
     const map = new naver.maps.Map(mapRef.current, {
       center: center,
       zoom: 16,
     });
     const marker = new naver.maps.Marker({
-      position: position,
+      position: new naver.maps.LatLng(37.5579479, 127.040481),
       map: map,
       icon: {
         content: '<div style="background-color: green; width: 20px; height: 20px; border-radius: 50%;"></div>',
@@ -43,14 +40,14 @@ function Map({ station }) {
       },
     });
     const circle = new naver.maps.Circle({
-      center: position,
+      center: new naver.maps.LatLng(37.5579479, 127.040481),
       map: map,
       radius: 100,
       strokeColor: 'transparent',
       fillColor: '#40FF00',
       fillOpacity: 0.2,
     });
-  }, [station]);
+  }, []);
 
   return (
     <MapContainer ref={mapRef} />

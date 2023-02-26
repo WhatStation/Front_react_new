@@ -234,7 +234,7 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   align-items: center;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 800;
-   background: linear-gradient(to right, #1DD991, #1DC9E6);
+  background: linear-gradient(to right, #1DD991, #1DC9E6);
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -597,7 +597,7 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 
 /*  result */
 
-
+/*
 .FeedbackSubmitButton{
   background: linear-gradient(135deg,#d6ff7f, #00b3cc);
   text-transform: uppercase;
@@ -618,6 +618,32 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   width: 100px;
   box-shadow: 2px 2px 5px #1DD991;
 }
+*/
+
+
+
+
+.FeedbackSubmitButton{
+  background: linear-gradient(135deg,#90e9aa, #00b3cc);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px 17px;
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 60px;
+  width: 150px;
+  box-shadow: 2px 2px 5px #1DD991;
+  text-shadow: 0 0 2px #ffffff, 0 0 1px #0000003b, 0 0 1px #25bb70, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 3px #13684b, 0 0 4px #4890b43d, 0 0 7px #1680be3b;
+}
 
 .FeedbackSubmitButton:hover{
   background: linear-gradient(to right, #51e795, #4cc4da);
@@ -628,11 +654,12 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
 .FeedbackQuestion1{
   font-family: 'Nanum Gothic', sans-serif;
   color: rgb(20, 209, 146);
+  /*text-shadow: 0 0 1px #ffffff, 0 0 20px #a2e4ca, 0 0 10px #c3dbd3, 0 0 5px #1c96cf1f, 0 0 10px #7cc7f31e;*/
   font-weight: 800;
   font-size: 2rem;
   border:none;
   font-size: 17px;
-  width: 20vw;
+  width: 500px;
   height: 3vh;
   text-align: center;
   margin-bottom: 0.3rem;
@@ -645,26 +672,11 @@ https://velog.io/@dltjsgho/css-border%EC%97%90-%EA%B7%B8%EB%9D%BC%EB%8D%B0%EC%9D
   font-size: 17px;
   border:none;
   border-radius: 10px;
-  width: 20vw;
+  width: 500px;
   height: 3vh;
   text-align: center;
   margin-bottom: 0.4rem;
   margin-top: 2rem;
-}
-
-.substoreletter{
-  font-family: 'Nanum Gothic', sans-serif;
-  /*color: rgb(20, 209, 146);*/
-  color:rgba(255, 255, 255, 0.979);
-  font-weight: 800;
-  font-size: 17px;
-  border:none;
-  border-radius: 10px;
-  width: 20vw;
-  height: 3vh;
-  text-align: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
 }
 
 .papereffect{
