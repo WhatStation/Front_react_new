@@ -87,7 +87,7 @@ const WriteReview = () => {
             <form className="review-form" onSubmit={handleSubmit}>
               {error && <div className="error">{error}</div>}
               <Rating onScoreChange={setScore} />
-              <textarea placeholder='이곳에 리뷰를 적어주세요. :)' className='review-form2'
+              <textarea placeholder='이곳을 클릭하여 리뷰를 적어주세요. :)' className='review-form2'
                 value={review}
                 maxlength='200'
                 onChange={(event) => setReview(event.target.value)}

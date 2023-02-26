@@ -13,7 +13,7 @@ export const ResultPageContainer = styled.div`
   height: 1080;
   z-index: 1;
   display: flex;
-
+  
 `;
 
 export const MainContainer = styled.div`
@@ -180,6 +180,7 @@ export const RecommendedStoreKeyword = styled.div`
 
 
 export const SubStoreContainer = styled.div`
+  position: absolute;
   font-family: 'Nanum Gothic', sans-serif;
   align-items: center;
   display: flex;
@@ -187,13 +188,12 @@ export const SubStoreContainer = styled.div`
   justify-content: center;
   height: 400px;
   width: 200px;
-  &:before {
-  content: "";
   border-radius: 40px;
+  margin-left: 800px;
   //backdrop-filter: blur(20px) brightness(100%);
   box-shadow: 2px 5px 50px 20px rgba(255, 255, 255, 0.1);
-  background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
-  z-index: -1;
+  //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  z-index: 99999;
 }
 `;
 
@@ -219,6 +219,7 @@ export const ReactionContainer = styled.div`
   margin-top: 4rem;
   height: 100%;
   width: 700px;
+  margin-left: 200px;
 //  border: solid black 1px;
   justify-content: center;
   .keyWordTag {
@@ -354,12 +355,15 @@ export const Substoreletter = styled.ul`
   height: 3vh;
   text-align: center;
   margin-bottom: 5px;
-  margin-top: 5px;
   text-shadow: 0 0 2px #ffffff, 0 0 3px #ffffffd5, 0 0 1px #25bb70, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4890b49e, 0 0 7px #1680bea2;
   //text-shadow: 0 0 1px #ffffff, 0 0 5px #267e5c, 0 0 30px #25bb70, 0 0 40px #9fc7ba, 0 0 70px #9ef0ce, 0 0 80px #37b88d, 0 0 100px #1681b3, 0 0 10px #4b7da5;
+  @media only screen and (max-width: 375px) {
+    width: 300px;
+  }
 `;
 
 export const SubStoreList = styled.ul`
+
   color:rgb(0, 0, 0);
   font-family: 'Nanum Gothic', sans-serif;
   list-style-type: square;
@@ -380,7 +384,7 @@ export const ImageContainer = styled.div`
   width: 1850px;
   min-width: 1900px;
 //  height: 7;
-  z-index: 1;
+  z-index: -9999;
 `;
 
 export const Bubble1 = styled.div`
@@ -397,6 +401,12 @@ export const Bubble1 = styled.div`
   //backdrop-filter: blur(20px) brightness(100%);
   box-shadow: 1px 1px 30px 10px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  @media only screen and (max-width: 1260px) {
+    margin-top: 45vh;
+  }
+  @media only screen and (max-width: 375px) {
+    margin-top: 48vh;
+  }
 `;
 
 
@@ -414,6 +424,9 @@ export const Bubble2 = styled.div`
   //backdrop-filter: blur(20px) brightness(100%);
   box-shadow: 1px 1px 20px 10px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  @media only screen and (max-width: 1260px) {
+    margin-top: 40vh;
+  }
 `;
 
 export const Bubble3 = styled.div`
@@ -431,6 +444,9 @@ export const Bubble3 = styled.div`
   //backdrop-filter: blur(20px) brightness(100%);
   box-shadow: 1px 1px 40px 20px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
+  @media only screen and (max-width: 1260px) {
+    margin-top: 75vh;
+  }
 `;
 
 
@@ -442,7 +458,7 @@ export const Logo = styled.div`
   margin-left: 200px;
   z-index: -3;
   right: 1000px;
-  z-index: 1;
+  z-index: -9999;
   opacity: 0.4;
   background-repeat: no-repeat;
   background-position: top center;

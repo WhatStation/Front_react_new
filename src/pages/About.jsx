@@ -5,6 +5,31 @@ import '../App.css';
 import { RiGithubFill,RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 
+const JiwonGit = () => {
+  window.location.href = 'https://github.com/journey-ai';
+}
+
+const YurimGit = () => {
+
+  window.location.href = 'https://github.com/jennifer060697';
+
+}
+
+const RkuGit = () => {
+
+  window.location.href = 'https://github.com/RK-IM';
+
+}
+
+const NanGit = () => {
+
+  window.location.href = 'https://github.com/nan-park';
+
+}
+
+
+
+
 
 const AboutPageBackground = styled.div`
   background-image:  url(./img/Result5.png);
@@ -148,13 +173,11 @@ function About() {
                       <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "white" }}>기획/PM</div>
                         <div className="profile-position" style={{ backgroundColor: "BLUE", color:"white" }}> FE</div>
                       </div>
-                      <div className="profile-info">
-                        <RiDoubleQuotesL /> AIoT 좋 아 요 <RiDoubleQuotesR />
-                      </div>
+
                       <button className="gitButton"
                         type="button"
-                        onclick="location.href='https://github.com/journey-ai'">
-                          <RiGithubFill  className="gitLogo"/>
+                        onClick={JiwonGit}>
+                        <RiGithubFill  className="gitLogo"/>
                       </button>
             </AboutPageMembersInfoElements>
             <AboutPageMembersInfoElements>
@@ -168,13 +191,11 @@ function About() {
                       <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "purple", color:"orange" }}>BE</div>
                         <div className="profile-position" style={{ backgroundColor: "orange", color:"white" }}> DE</div>
                       </div>
-                      <div className="profile-info">
-                      <RiDoubleQuotesL /> 시키면 해낸다 <RiDoubleQuotesR />
-                      </div>
+
                       <button className="gitButton"
                         type="button"
-                        onclick="location.href='https://github.com/journey-ai'">
-                          <RiGithubFill  className="gitLogo"/>
+                        onClick={YurimGit}>
+                        <RiGithubFill  className="gitLogo"/>
                       </button>
             </AboutPageMembersInfoElements>
             <AboutPageMembersInfoElements>
@@ -188,13 +209,11 @@ function About() {
                       <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "GREEN", color:"white" }}>DS</div>
                         <div className="profile-position" style={{ backgroundColor: "red", color:"yellow" }}> MLE</div>
                       </div>
-                      <div className="profile-info">
-                      <RiDoubleQuotesL /> 어딘가 천재가 분명함 <RiDoubleQuotesR />
-                      </div>
+
                       <button className="gitButton"
                         type="button"
-                        onclick="location.href='https://github.com/journey-ai'">
-                          <RiGithubFill  className="gitLogo"/>
+                        onClick={RkuGit}>
+                        <RiGithubFill  className="gitLogo"/>
                       </button>
             </AboutPageMembersInfoElements>
             <AboutPageMembersInfoElements>
@@ -208,13 +227,11 @@ function About() {
                       <div className="profile-position" style={{ marginRight: "2px", backgroundColor: "GREEN", color:"white" }}>DS</div>
                         <div className="profile-position" style={{ backgroundColor: "red", color:"yellow" }}> MLE</div>
                       </div>
-                      <div className="profile-info">
-                      <RiDoubleQuotesL /> 막내가 선배지 <RiDoubleQuotesR />
-                      </div>
+
                       <button className="gitButton"
                         type="button"
-                        onclick="location.href='https://github.com/journey-ai'">
-                          <RiGithubFill  className="gitLogo"/>
+                        onClick={NanGit}>
+                        <RiGithubFill  className="gitLogo"/>
                       </button>
             </AboutPageMembersInfoElements>
 
@@ -258,3 +275,25 @@ const fadeIn = keyframes`
 
 
 */
+
+
+/*
+
+                      <div className="profile-info">
+                      <RiDoubleQuotesL /> 어딘가 천재가 분명함 <RiDoubleQuotesR />
+                      </div>
+
+                      <div className="profile-info">
+                      <RiDoubleQuotesL /> 시키면 해낸다 <RiDoubleQuotesR />
+                      </div>
+
+                                            <div className="profile-info">
+                        <RiDoubleQuotesL /> AIoT 좋 아 요 <RiDoubleQuotesR />
+                      </div>
+
+                      <div className="profile-info">
+                      <RiDoubleQuotesL /> 막내가 선배지 <RiDoubleQuotesR />
+                      </div>
+
+
+                      */
