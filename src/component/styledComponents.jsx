@@ -13,6 +13,9 @@ export const ResultPageContainer = styled.div`
   height: 1080;
   z-index: 1;
   display: flex;
+  @media only screen and (max-width: 1260px) {
+    margin-top: 0vh;
+  }
   
 `;
 
@@ -34,6 +37,10 @@ export const MainContainer = styled.div`
   @media only screen and (max-width: 1400px) {
     width: 1400px;
     height: 805px;
+  }
+  @media only screen and (max-width: 1260px) {
+    margin-top: 10vh;
+    padding: 120px;
   }
 `;
 
@@ -286,6 +293,11 @@ export const ResultTagContainer = styled.div`
       transform: translateX(0);
     }
   }
+  @media only screen and (max-width: 1260px) {
+    margin-top: -200px;
+    width:720px;
+    padding: 120px;
+  }
 `;
 
 export const TopTitle = styled.span`
@@ -402,7 +414,7 @@ export const Bubble1 = styled.div`
   box-shadow: 1px 1px 30px 10px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
   @media only screen and (max-width: 1260px) {
-    margin-top: 45vh;
+    margin-top: 35vh;
   }
   @media only screen and (max-width: 375px) {
     margin-top: 48vh;
@@ -425,7 +437,7 @@ export const Bubble2 = styled.div`
   box-shadow: 1px 1px 20px 10px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
   @media only screen and (max-width: 1260px) {
-    margin-top: 40vh;
+    margin-top: 20vh;
   }
 `;
 
@@ -445,7 +457,7 @@ export const Bubble3 = styled.div`
   box-shadow: 1px 1px 40px 20px rgba(117, 230, 196, 0.842);
   //background: linear-gradient(70deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.8));
   @media only screen and (max-width: 1260px) {
-    margin-top: 75vh;
+    margin-top: 65vh;
   }
 `;
 
