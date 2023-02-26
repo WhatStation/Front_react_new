@@ -41,6 +41,8 @@ export const MainContainer = styled.div`
   @media only screen and (max-width: 1260px) {
     margin-top: 10vh;
     padding: 120px;
+    width: 800px;
+    min-width: 800px;
   }
 `;
 
@@ -183,6 +185,9 @@ export const RecommendedStoreKeyword = styled.div`
     align-items: center;
     font-family:'Nanum Gothic', sans-serif;
     text-shadow: 0 0 2px #ffffff, 0 0 2px #bad8cc81, 0 0 1px #25bb70, 0 0 1px #9fc7ba, 0 0 1px #a2e4ca, 0 0 1px #c3dbd3, 0 0 4px #4890b49e, 0 0 7px #1680bea2;
+    @media only screen and (max-width: 1260px) {
+      width: 200px;
+    }
   `;
 
 
